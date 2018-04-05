@@ -1,0 +1,15 @@
+{:env :dev
+ :web-server {:port 6543}
+ :cors {:origin #{"http://localhost:3000"
+                  "http://localhost:4000"}
+        :methods "GET"}
+ :encryption-salt {"84B03D034B409D4E"};;maybe provide a set instead, or generator functions
+ :document-db {:host "127.0.0.1"
+               :port 31416
+               :db-name "fy-server"}
+ :logging {:spit-appender-options
+           {:fname "log/dev.log"
+            :append? true}
+           :min-level :debug}
+
+ :garden {:output-dir "resources/public/css/compiled"}}
